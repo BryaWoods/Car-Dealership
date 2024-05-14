@@ -31,10 +31,11 @@ public class DealershipFileManager {
                 String model = parts[3];
                 String type = parts[4];
                 String color = parts[5];
-                int odometer = Integer.parseInt(parts[6]);
-                double price = Double.parseDouble(parts[7]);
+                String condition = parts[6];
+                int odometer = Integer.parseInt(parts[7]);
+                double price = Double.parseDouble(parts[8]);
 
-                Vehicle vehicle = new Vehicle(vin, year, make, model, type, color, odometer, price);
+                Vehicle vehicle = new Vehicle(vin, year, make, model, type, color, condition, odometer, price);
                 dealership.addVehicle(vehicle);
 
 
@@ -48,7 +49,7 @@ public class DealershipFileManager {
     }
 
     public void saveDealership(Dealership dealership){
-        
+
 
     }
 

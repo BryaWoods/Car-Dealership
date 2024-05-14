@@ -8,10 +8,11 @@ public class Vehicle {
     private String model;
     private String vehicleType;
     private String color;
+    private String condition;
     private int odometer;
     private double price;
 
-    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, int odometer, double price) {
+    public Vehicle(int vin, int year, String make, String model, String vehicleType, String color, String condition, int odometer, double price) {
         this.vin = vin;
         this.year = year;
         this.make = make;
