@@ -1,8 +1,6 @@
 package com.pluralsight;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 public class DealershipFileManager {
     private String fileName;
@@ -49,6 +47,28 @@ public class DealershipFileManager {
     }
 
     public void saveDealership(Dealership dealership){
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+            writer.write(dealership.getName() + "|" + dealership.getAddress() + "|" + dealership.getPhone());
+            writer.newLine();
+
+            for (Vehicle vehicle : dealership.getAllVehicles()) {
+                writer.write(vehicle.getVin() + "|" +
+                        vehicle.getYear() + "|" +
+                        vehicle.getMake() + "|" +
+                        vehicle.getModel() + "|" +
+                        vehicle.getVehicleType() + "|" +
+                        vehicle.getColor() + "|" +
+                        vehicle.getCondition() + "|" +
+                        vehicle.getOdometer() + "|" +
+                        vehicle.getPrice());
+                writer.newLine();
+
+            }
+            System.out.println("Dealership information saved successfully.");
+        } catch (IOException e) {
+            System.err.println("Error saving dealership information: " + e.getMessage());
+        }
+
 
 
     }

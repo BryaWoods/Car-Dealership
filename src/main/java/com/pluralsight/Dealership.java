@@ -58,9 +58,10 @@ public class Dealership {
     public List<Vehicle> getVehiclesByMakeModel(String make,String model){
         List<Vehicle> vehiclesByMakeModel = new ArrayList<>();
 
-        for (Vehicle vehicle : inventory){
-            if (vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model));
-            vehiclesByMakeModel.add(vehicle);
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model)) {
+                vehiclesByMakeModel.add(vehicle);
+            }
         }
         return vehiclesByMakeModel;
 
@@ -69,7 +70,7 @@ public class Dealership {
         List<Vehicle> vehiclesByYear = new ArrayList<>();
 
         for (Vehicle vehicle : inventory){
-            if(vehicle.getYear() >= min && vehicle.getPrice() <=max){
+            if(vehicle.getYear() >= min && vehicle.getYear() <=max){
                 vehiclesByYear.add(vehicle);
             }
         }
@@ -112,6 +113,19 @@ public class Dealership {
 
     }
 
+    public List<Vehicle> getVehiclesByCondition(){
+        List<Vehicle> vehiclesByCondition = new ArrayList<>();
+
+        for (Vehicle vehicle : inventory){
+            if(vehicle.getCondition().equalsIgnoreCase("Vintage")
+                    || vehicle.getCondition().equalsIgnoreCase("Classic")) {
+                vehiclesByCondition.add(vehicle);
+            }
+        }
+        return vehiclesByCondition;
+
+    }
+
     public List<Vehicle> getAllVehicles(){
 
         return inventory;
@@ -127,6 +141,15 @@ public class Dealership {
         inventory.remove(vehicle);
 
 
+    }
+
+    public Vehicle findVehicleByVin(int vin) {
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getVin() == vin){
+                return  vehicle;
+            }
+        }
+        return  null;
     }
 
 
