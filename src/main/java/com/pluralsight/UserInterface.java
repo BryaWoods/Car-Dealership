@@ -79,12 +79,13 @@ public class UserInterface {
     }
 
     private void displayVehicles(List<Vehicle> vehicles){
-        System.out.println("                               ✦✧✦VEHICLES✦✧✦");
-        System.out.println("ID   | Year | Make        | Model      | Type       | Color | Condition | Mileage | Price");
-        System.out.println("⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹");
+        System.out.println("                                            ✦✧✦VEHICLES✦✧✦");
+        System.out.println("⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚");
+        System.out.println("ID    | Year | Make            | Model        | Type         | Color    | Condition | Mileage | Price");
+        System.out.println("✧✦      ✦✧✦✧   ✦✧✦✧              ✦✧✦✧✦          ✦✧✦✧           ✦✧✦✧✦      ✧✦✧✦✧✦✧✦✧   ✦✧✦✧✦✧✦   ✧✦✧✦✧✦");
         for (Vehicle vehicle : vehicles) {
 
-            String format = "%-5s | %-4d | %-11s | %-10s | %-10s | %-5s | %-9s | %-7d | $%.2f\n";
+            String format = "%-5s | %-4d | %-15s | %-12s | %-12s | %-8s | %-9s | %-7d | $%.2f\n";
             System.out.printf(format,
                     vehicle.getVin(),
                     vehicle.getYear(),
@@ -96,7 +97,9 @@ public class UserInterface {
                     vehicle.getOdometer(),
                     vehicle.getPrice()
             );
+
         }
+        System.out.println("⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚⊹⋆｡༄⋆˚");
 
     }
 

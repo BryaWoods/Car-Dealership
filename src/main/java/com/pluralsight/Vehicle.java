@@ -19,6 +19,7 @@ public class Vehicle {
         this.model = model;
         this.vehicleType = vehicleType;
         this.color = color;
+        this.condition = condition;
         this.odometer = odometer;
         this.price = price;
     }
