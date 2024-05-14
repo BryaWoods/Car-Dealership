@@ -23,6 +23,14 @@ public class Vehicle {
         this.price = price;
     }
 
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
     public int getVin() {
         return vin;
     }
