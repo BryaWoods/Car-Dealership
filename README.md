@@ -53,6 +53,7 @@ Follow these steps to get your application running within IntelliJ IDEA:
 
 ## Demo
 
+![dealershipGif](https://github.com/BryaWoods/Car-Dealership/assets/166551351/970c0614-a5a4-425b-8e11-2aa888659aed)
 
 
 
